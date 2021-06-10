@@ -20,7 +20,7 @@ default_args = {
     # 'queue': 'bash_queue',
     # 'pool': 'backfill',
     # 'priority_weight': 10,
-    # 'end_date': datetime(2016, 1, 1),
+    'end_date': datetime(2021, 6, 11),
     # 'wait_for_downstream': False,
     # 'dag': dag,
     # 'sla': timedelta(hours=2),
@@ -35,8 +35,8 @@ with DAG(
     'tutorial',
     default_args=default_args,
     description='A simple tutorial DAG',
-    schedule_interval=timedelta(days=1),
-    start_date=days_ago(2),
+    schedule_interval=timedelta(minutes=1),
+    start_date=days_ago(minute=1),
     tags=['example'],
 ) as dag:
 
