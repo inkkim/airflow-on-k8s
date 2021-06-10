@@ -37,7 +37,7 @@ with DAG(
     default_args=default_args,
     description='A simple tutorial DAG',
     schedule_interval=timedelta(minutes=1),
-    start_date=days_ago(minute=1),
+    start_date=days_ago(0, minute=1),
     tags=['example'],
 ) as dag:
 
