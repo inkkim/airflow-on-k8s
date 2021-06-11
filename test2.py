@@ -7,6 +7,7 @@
 import json
 import feedparser
 from datetime import datetime
+from datetime import timedelta
 import time
 import re
 import ssl
@@ -35,7 +36,7 @@ default_args = {
 
 
 # [START instantiate_dag]
-@dag(default_args=default_args, schedule_interval='@once', start_date=datetime.now(), tags=['RJK','NEWS','NEWSIS','RSS'])
+@dag(default_args=default_args, schedule_interval='@once', start_date=datetime.now() + timedelta(minutes=2), tags=['RJK','NEWS','NEWSIS','RSS'])
 def SC_NEWS_NEWSIS_20210427():
     """
     ### TaskFlow API Tutorial Documentation
