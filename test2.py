@@ -36,7 +36,7 @@ default_args = {
 
 
 # [START instantiate_dag]
-@dag(default_args=default_args, schedule_interval='*/2 * * * *', start_date=datetime(2021,06,11),end_date=datetime(2021, 06, 12), tags=['RJK','NEWS','NEWSIS','RSS'])
+@dag(default_args=default_args, schedule_interval='*/2 * * * *', start_date=datetime(2021,6,11),end_date=datetime(2021, 6, 12), tags=['RJK','NEWS','NEWSIS','RSS'])
 def SC_NEWS_NEWSIS_20210427():
     """
     ### TaskFlow API Tutorial Documentation
