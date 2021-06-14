@@ -39,6 +39,7 @@ with DAG(
     schedule_interval='*/3 * * * *',
     start_date=datetime(2021, 6, 14, 1, 30),
     tags=['example'],
+    catchup=True
 ) as dag:
 
     # t1, t2 and t3 are examples of tasks created by instantiating operators
