@@ -36,8 +36,8 @@ with DAG(
     'tutorial',
     default_args=default_args,
     description='A simple tutorial DAG',
-    schedule_interval=timedelta(minutes=3),
-    start_date=days_ago(0, minute=1),
+    schedule_interval='*/3 * * * *'
+    start_date=datetime(2021, 6, 14, 1, 30),
     tags=['example'],
 ) as dag:
 
