@@ -23,7 +23,7 @@ default_args = {
 }
 
 
-@dag(default_args=default_args, schedule_interval='*/3 * * * *', start_date=dateitme(2021, 6, 14, 1, 0), params={'basedate': 'Do_not_use'})
+@dag(default_args=default_args, schedule_interval='*/3 * * * *', start_date=datetime(2021, 6, 14, 1, 0), params={'basedate': 'Do_not_use'})
 
 def SC_NEWS_ALL_DAUM_20210430():
     """
